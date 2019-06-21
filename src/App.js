@@ -1,6 +1,6 @@
 import React,{Component,Fragment} from 'react';
 import { Provider } from 'react-redux';
-import { HashRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route} from 'react-router-dom';
 import {GlobalStyle} from './style.js';
 import Header from './common/header/index';
 import {IconfontStyle} from './statics/iconfont/iconfont.js';
@@ -16,13 +16,13 @@ class App extends Component{
         <Fragment>
           <GlobalStyle />
           <IconfontStyle /> 
-          <HashRouter>
+          <BrowserRouter>
               <Header />  
               <Route path = '/' exact component = {Home}></Route>
               <Route path = '/login' exact component = {Login}></Route>
               <Route path = '/detail:id' exact component = {Detail}></Route>
               <Route path = '/write' exact component = {Write}></Route>
-          </HashRouter>
+          </BrowserRouter>
         </Fragment>    
       </Provider>
     )
